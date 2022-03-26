@@ -6,9 +6,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
 
         <Button
             android:id="@+id/back"
@@ -19,22 +22,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:text="EditText Test"
             android:textSize="10pt"
-            android:typeface="sans"
             android:textStyle="bold"
-            />
+            android:typeface="sans" />
 
         <Button
             android:id="@+id/next"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="end"
+            android:layout_gravity="right"
             android:text="다음" />
 
-    </LinearLayout>
+    </FrameLayout>
 
 
     <LinearLayout
