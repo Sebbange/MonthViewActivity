@@ -44,14 +44,14 @@ public class MyAdapter extends BaseAdapter {
             convertView = inflater.inflate(mResource, parent,false);
         }
 
-        //ImageView icon = (ImageView) convertView.findViewById(R.id.iconItem);
-        //icon.setImageResource(mItems.get(position).mIcon);
-
-        //TextView name = (TextView) convertView.findViewById(R.id.textItem1);
-        //name.setText(mItems.get(position).nName);
-
-        //TextView age = (TextView) convertView.findViewById(R.id.textItem2);
-        //age.setText(mItems.get(position).nAge);
+//        TextView year = (ImageView) convertView.findViewById(R.id.iconItem);
+//        year.setText(mItems.get(position).mYear);
+//
+//        TextView month = (TextView) convertView.findViewById(R.id.textItem1);
+//        month.setText(mItems.get(position).mMonth);
+//
+//        TextView day = (TextView) convertView.findViewById(R.id.textItem2);
+//        day.setText(mItems.get(position).mDay);
 
         return convertView;
     }

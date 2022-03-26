@@ -1,13 +1,13 @@
 package com.hansung.android.monthviewactivity;
 
 public class MyItem {
-    String mClassName;
-    String mClassTime;
-    String mClassRoom;
+    String mYear;
+    String mMonth;
+    String mDay;
 
-    public MyItem(String mClassName, String mClassTime, String mClassRoom) {
-        this.mClassName = mClassName;
-        this.mClassTime = mClassTime;
-        this.mClassRoom = mClassRoom;
+    public MyItem(String mYear, String mMonth, String mDay) {
+        this.mYear = mYear;
+        this.mMonth = mMonth;
+        this.mDay = mDay;
     }
 }
