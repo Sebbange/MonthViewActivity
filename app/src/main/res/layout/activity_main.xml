@@ -42,64 +42,78 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:background="#A5E35D"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="일"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:typeface="monospace" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="월"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:typeface="monospace" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="화"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:typeface="monospace" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="수"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:typeface="monospace" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="목"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:typeface="monospace" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="금"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:typeface="monospace" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="토"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:typeface="monospace" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="일"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="월"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="화"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="수"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="목"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="금"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="토"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
