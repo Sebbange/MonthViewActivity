@@ -24,7 +24,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:text="2022년 04월"
             android:textSize="8pt" />
 
         <Button
@@ -120,7 +119,6 @@
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="100dp"
         android:numColumns="7"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
