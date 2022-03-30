@@ -1,6 +1,8 @@
 package com.hansung.android.monthviewactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,29 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button back = findViewById(R.id.button_back);
-        back.setOnClickListener(new View.OnClickListener() {
+        Button btn = findViewById(R.id.button_next);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(intent);
             }
         });
-
-        Button next = findViewById(R.id.button_next);
-        next.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-
-            }
-        });
-
-        String[] items = {"item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8"};
-
-        ArrayAdapter<String> adapt
-                = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                items);
-
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(adapt);
     }
 }
