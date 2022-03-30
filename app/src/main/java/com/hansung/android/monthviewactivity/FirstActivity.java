@@ -29,6 +29,15 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_b = findViewById(R.id.button_first_back);
+        btn_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ThirdActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Calendar cal = Calendar.getInstance();
         date = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)+1)+"월";
         textView = (TextView)findViewById(R.id.year_first_month);
