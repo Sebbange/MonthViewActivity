@@ -7,4 +7,7 @@ public class CalendarItem {
         nDay = aDay;
     }
 
+    public CalendarItem(Integer integer) {
+
+    }
 }

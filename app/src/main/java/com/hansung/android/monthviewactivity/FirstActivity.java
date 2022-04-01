@@ -1,5 +1,7 @@
 package com.hansung.android.monthviewactivity;
 
+import static java.util.Calendar.MONTH;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -49,17 +51,20 @@ public class FirstActivity extends AppCompatActivity {
 
         Calendar cal = Calendar.getInstance();
 
-        yearandmonth = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)+1)+"월";
+        yearandmonth = cal.get(Calendar.YEAR)+"년"+(cal.get(MONTH)+1)+"월";
         textView = (TextView)findViewById(R.id.year_first_month);
         textView.setText(yearandmonth);
 
-        int firstday = cal.getActualMinimum(Calendar.DATE); // 매월 첫 번째 날짜(== 1일)
-        int dayofweek = cal.get(Calendar.DAY_OF_WEEK); // 요일
-
         ArrayList<CalendarItem> data = new ArrayList<CalendarItem>();
-        if(firstday!=dayofweek) {
-             // 현재 출력 안됨. 매월 1일이 해당하는 요일이 아닐 때마다 공백 출력
+
+        cal.set(cal.get(Calendar.YEAR), MONTH+1, 1);
+        int startday = cal.get(Calendar.DAY_OF_WEEK);
+        if(startday != 1) {
+            for(int i=0; i<startday-1; i++) {
+                data.add(new CalendarItem(null));
+            }
         }
+
         for(int i=1; i<(cal.getActualMaximum(Calendar.DATE))+1 ;i++) {
             data.add(new CalendarItem(i));
         } // 매월 1일이 요일과 일치하면 (ex: 22년 4월 1일은 금요일) 그때부터 해당 말일(4월은 30일)까지 날짜 출력
