@@ -61,12 +61,12 @@ public class FirstActivity extends AppCompatActivity {
         int startday = cal.get(Calendar.DAY_OF_WEEK);
         if(startday != 1) {
             for(int i=0; i<startday-1; i++) {
-                data.add(new CalendarItem(null));
+                data.add(new CalendarItem(" "));
             }
-        }
+        } // 매월 1일이 요일과 일치하지 않으면 공백 출력
 
-        for(int i=1; i<(cal.getActualMaximum(Calendar.DATE))+1 ;i++) {
-            data.add(new CalendarItem(i));
+        for (int i = 0; i < cal.getActualMaximum(Calendar.DAY_OF_MONTH); i++) {
+            data.add(new CalendarItem("" + (i + 1)));
         } // 매월 1일이 요일과 일치하면 (ex: 22년 4월 1일은 금요일) 그때부터 해당 말일(4월은 30일)까지 날짜 출력
 
         adapter = new CalendarAdapter(this, R.layout.gridviewcalendar, data);

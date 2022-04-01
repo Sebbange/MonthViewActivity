@@ -44,6 +44,9 @@ public class CalendarAdapter extends BaseAdapter {
         TextView day = (TextView) convertView.findViewById(R.id.gridview_cal_tv);
         day.setText(String.valueOf(mItems.get(position).nDay));
 
+        TextView day2 = (TextView) convertView.findViewById(R.id.gridview_cal_tv);
+        day2.setText(mItems.get(position).lday);
+
         return convertView;
     }
 
