@@ -6,4 +6,5 @@ public class CalendarItem {
     CalendarItem(int aDay) {
         nDay = aDay;
     }
+
 }
