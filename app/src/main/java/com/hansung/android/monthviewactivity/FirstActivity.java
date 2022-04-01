@@ -93,7 +93,7 @@ public class FirstActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                Toast.makeText(FirstActivity.this, "" + (position+1)+ "번째 선택",
+                Toast.makeText(FirstActivity.this,date+ (position+1)+"일",
                         Toast.LENGTH_SHORT).show();
             }
         });
