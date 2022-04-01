@@ -31,7 +31,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         Calendar cal = Calendar.getInstance();
 
-        yearandmonth = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)-1)+"월";
+        yearandmonth = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH))+"월";
         textView = (TextView)findViewById(R.id.year_first_month);
         textView.setText(yearandmonth);
 
