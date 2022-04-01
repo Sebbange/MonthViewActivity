@@ -1,9 +1,9 @@
 package com.hansung.android.monthviewactivity;
 
 public class CalendarItem {
-    String nDay;
+    int nDay;
 
-    CalendarItem(String aDay) {
+    CalendarItem(int aDay) {
         nDay = aDay;
     }
 }

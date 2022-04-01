@@ -17,7 +17,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        String date;
+        String yearandmonth;
         TextView textView;
 
         Button btn_b = findViewById(R.id.button_second_back);
@@ -30,9 +30,9 @@ public class SecondActivity extends AppCompatActivity {
         });
 
         Calendar cal = Calendar.getInstance();
-        date = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)+2)+"월";
+        yearandmonth = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)+2)+"월";
         textView = (TextView)findViewById(R.id.year_second_month);
-        textView.setText(date);
+        textView.setText(yearandmonth);
 
     }
 }

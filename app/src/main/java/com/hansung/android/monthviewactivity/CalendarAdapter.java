@@ -35,16 +35,14 @@ public class CalendarAdapter extends BaseAdapter {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        String date;
-        TextView textView;
 
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(mResource, parent,false);
         }
 
-        TextView name = (TextView) convertView.findViewById(R.id.gridview_cal_tv);
-        name.setText(mItems.get(position).nDay);
+        TextView day = (TextView) convertView.findViewById(R.id.gridview_cal_tv);
+        day.setText(String.valueOf(mItems.get(position).nDay));
 
         return convertView;
     }

@@ -17,7 +17,7 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        String date;
+        String yearandmonth;
         TextView textView;
 
         Button btn_t_n = findViewById(R.id.button_third_next);
@@ -31,9 +31,9 @@ public class ThirdActivity extends AppCompatActivity {
 
         Calendar cal = Calendar.getInstance();
 
-        date = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)-1)+"월";
+        yearandmonth = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)-1)+"월";
         textView = (TextView)findViewById(R.id.year_first_month);
-        textView.setText(date);
+        textView.setText(yearandmonth);
 
     }
 }

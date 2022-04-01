@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -25,8 +26,7 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        String date;
-        int day;
+        String yearandmonth;
         TextView textView;
 
         Button btn_n = findViewById(R.id.button_first_next);
@@ -49,42 +49,16 @@ public class FirstActivity extends AppCompatActivity {
 
         Calendar cal = Calendar.getInstance();
 
-        date = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)+1)+"월";
+        yearandmonth = cal.get(Calendar.YEAR)+"년"+(cal.get(Calendar.MONTH)+1)+"월";
         textView = (TextView)findViewById(R.id.year_first_month);
-        textView.setText(date);
+        textView.setText(yearandmonth);
+
+        cal.set(Calendar.DAY_OF_MONTH, 1);
 
         ArrayList<CalendarItem> data = new ArrayList<CalendarItem>();
-        data.add(new CalendarItem("1"));
-        data.add(new CalendarItem("2"));
-        data.add(new CalendarItem("3"));
-        data.add(new CalendarItem("4"));
-        data.add(new CalendarItem("5"));
-        data.add(new CalendarItem("6"));
-        data.add(new CalendarItem("7"));
-        data.add(new CalendarItem("8"));
-        data.add(new CalendarItem("9"));
-        data.add(new CalendarItem("10"));
-        data.add(new CalendarItem("11"));
-        data.add(new CalendarItem("12"));
-        data.add(new CalendarItem("13"));
-        data.add(new CalendarItem("14"));
-        data.add(new CalendarItem("15"));
-        data.add(new CalendarItem("16"));
-        data.add(new CalendarItem("17"));
-        data.add(new CalendarItem("18"));
-        data.add(new CalendarItem("19"));
-        data.add(new CalendarItem("20"));
-        data.add(new CalendarItem("21"));
-        data.add(new CalendarItem("22"));
-        data.add(new CalendarItem("23"));
-        data.add(new CalendarItem("24"));
-        data.add(new CalendarItem("25"));
-        data.add(new CalendarItem("26"));
-        data.add(new CalendarItem("27"));
-        data.add(new CalendarItem("28"));
-        data.add(new CalendarItem("29"));
-        data.add(new CalendarItem("30"));
-        data.add(new CalendarItem("31"));
+        for(int i=1; i<(cal.getActualMaximum(Calendar.DATE))+1 ;i++) {
+            data.add(new CalendarItem(i));
+        }
 
         adapter = new CalendarAdapter(this, R.layout.gridviewcalendar, data);
         GridView gridview = (GridView) findViewById(R.id.gridview);
@@ -93,7 +67,7 @@ public class FirstActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                Toast.makeText(FirstActivity.this,date+ (position+1)+"일",
+                Toast.makeText(FirstActivity.this,yearandmonth+ (position+1)+"일",
                         Toast.LENGTH_SHORT).show();
             }
         });
