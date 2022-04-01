@@ -58,7 +58,7 @@ public class FirstActivity extends AppCompatActivity {
 
         ArrayList<CalendarItem> data = new ArrayList<CalendarItem>();
         if(firstday!=dayofweek) {
-            System.out.println(" "); // 현재 출력 안됨. 매월 1일이 해당하는 요일이 아닐 때마다 공백 출력
+             // 현재 출력 안됨. 매월 1일이 해당하는 요일이 아닐 때마다 공백 출력
         }
         for(int i=1; i<(cal.getActualMaximum(Calendar.DATE))+1 ;i++) {
             data.add(new CalendarItem(i));
