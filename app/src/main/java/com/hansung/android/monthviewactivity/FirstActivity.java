@@ -76,7 +76,9 @@ public class FirstActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                Toast.makeText(FirstActivity.this,yearandmonth+ (position+1)+"일",
+                Toast.makeText(FirstActivity.this,yearandmonth+
+                                (position) //**************토스트메시지 일 부분 수정 필요함
+                                +"일",
                         Toast.LENGTH_SHORT).show();
             }
         });
