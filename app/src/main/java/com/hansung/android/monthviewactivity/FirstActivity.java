@@ -61,33 +61,33 @@ public class FirstActivity extends AppCompatActivity {
             System.out.println(" "); // 현재 출력 안됨. 매월 1일이 해당하는 요일이 아닐 때마다 공백 출력
         }
         switch(cal.get(Calendar.MONTH)) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                for(int i=1; i<32 ;i++) {
-                    data.add(new CalendarItem(i));
-                }
-                break;
+            case 0:
+            case 2:
             case 4:
             case 6:
+            case 7:
             case 9:
             case 11:
-                for(int i=1; i<31 ;i++) {
+                for(int i=1; i<32; i++) {
                     data.add(new CalendarItem(i));
                 }
                 break;
-            case 2:
+            case 3:
+            case 5:
+            case 8:
+            case 10:
+                for(int i=1; i<31; i++) {
+                    data.add(new CalendarItem(i));
+                }
+                break;
+            case 1:
                 if(cal.get(Calendar.YEAR)%4==0 && cal.get(Calendar.YEAR)%100!=0 ||
                         cal.get(Calendar.YEAR)%400==0) {
-                    for(int i=1; i<29 ;i++) {
+                    for(int i=1; i<29; i++) {
                         data.add(new CalendarItem(i));
                     }
                 } else {
-                    for(int i=1; i<28 ;i++) {
+                    for(int i=1; i<28; i++) {
                         data.add(new CalendarItem(i));
                     }
                 }
