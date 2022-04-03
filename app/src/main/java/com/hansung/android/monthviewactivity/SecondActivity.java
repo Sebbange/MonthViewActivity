@@ -1,5 +1,7 @@
 package com.hansung.android.monthviewactivity;
 
+import static java.util.Calendar.MONTH;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -40,6 +42,18 @@ public class SecondActivity extends AppCompatActivity {
         textView.setText(yearandmonth);
 
         ArrayList<CalendarItem> data = new ArrayList<CalendarItem>();
+
+        cal.set(cal.get(Calendar.YEAR), MONTH+1, 31);
+        int startday = cal.get(Calendar.DAY_OF_WEEK);
+        if(startday != 1) {
+            for(int i=0; i<startday-6; i++) {
+                data.add(new CalendarItem(" "));
+            }
+        }
+        for (int i = 0; i < cal.getActualMaximum(Calendar.DAY_OF_MONTH); i++) {
+            data.add(new CalendarItem("" + (i + 1)));
+        }
+
         for(int i=1; i<(cal.getActualMaximum(Calendar.DATE))+1 ;i++) {
             data.add(new CalendarItem(i));
         }
